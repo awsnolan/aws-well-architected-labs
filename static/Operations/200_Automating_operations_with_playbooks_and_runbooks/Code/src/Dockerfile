@@ -11,7 +11,8 @@ COPY package*.json ./
 # If you are building your code for production
 # RUN npm ci --only=production
 ENV NODE_ENV=production
-RUN npm install
+RUN npm install -g npm@latest
+RUN npm install 
 
 # Bundle app source
 COPY . .
